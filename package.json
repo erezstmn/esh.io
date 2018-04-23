@@ -1,0 +1,19 @@
+{
+  "name": "esh.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Erez Shtayman",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3",
+    "random-key": "^0.3.2"
+  }
+}

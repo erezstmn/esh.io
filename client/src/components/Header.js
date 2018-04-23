@@ -7,7 +7,7 @@ import About from './About';
 import Error from './Error';
 
 
-export default () =>{
+export default (props) =>{
     return (
         <div>
             <h1>Header</h1>
@@ -19,7 +19,7 @@ export default () =>{
             <div>
                 <Switch>
                     <Route path="/" component={About} exact/>
-                    <Route path="/login" component={Login} exact/>
+                    <Route path="/login" render={() => <Login handleLoginUser={props.handleLoginUser}/>} exact/>
                     <Route path="/dashboard" component={Dashboard} exact/>
                     <Route path="/" component={Error}/>
                 </Switch>

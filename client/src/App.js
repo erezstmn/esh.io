@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
 import {BrowserRouter} from 'react-router-dom';
+import axios from 'axios';
+
 import Header from'./components/Header';
 import './App.css';
 
+
 export default class App extends Component {
+  constructor(props){
+    super(props);
+    this.handleLoginUser = this.handleLoginUser.bind(this);
+  }
+  handleLoginUser(e){
+    
+    e.preventDefault();    
+    axios.post('/api_key')
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
   render() {
     return (
       <BrowserRouter>        
-          <Header />
+          <Header handleLoginUser={this.handleLoginUser}/>
       </BrowserRouter>
     );
   }

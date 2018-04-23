@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.static(path.resolve(__dirname, './client/build')));
 
-app.get('/api_key', (req,res) => {
+app.post('/api_key', (req,res) => {
     res.send(randoKey.generate(10));
 });
 

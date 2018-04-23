@@ -12,11 +12,15 @@ export default class App extends Component {
     this.handleLoginUser = this.handleLoginUser.bind(this);
   }
   handleLoginUser(e){
-    
+    let userInfo = {
+      user_name: document.getElementById('user_name').value,
+      password: document.getElementById('password').value
+    }
     e.preventDefault();    
-    axios.post('/api_key')
+    axios.post('/login', userInfo)
     .then((res) => {
       console.log(res);
+      alert(res.data.message);
     })
     .catch((err) => {
       console.log(err);

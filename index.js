@@ -1,7 +1,10 @@
 const express = require('express');
 const randoKey = require('random-key');
+const path = require('path');
 
 const app = express();
+
+app.use(express.static(path.resolve(__dirname, './client/build')));
 
 app.get('/api_key', (req,res) => {
     res.send(randoKey.generate(10));

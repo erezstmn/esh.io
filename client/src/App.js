@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {BrowserRouter} from 'react-router-dom';
+import Header from'./components/Header';
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        This is the App
-      </div>
+      <BrowserRouter>        
+          <Header />
+      </BrowserRouter>
     );
   }
 }
 
-export default App;

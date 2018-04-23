@@ -6,7 +6,7 @@ export default  () =>{
         <div>
             <form>
                 <fieldset>
-                <h1>Login</h1>
+                    <h1>Login</h1>
                     <input type="text" placeholder="username"/>
                     <input type="password" placeholder="password"/>
                 </fieldset>

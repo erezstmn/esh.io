@@ -17,7 +17,7 @@ export default () => {
 						    <div  style={{"textIndent": "4em"}}>title,</div>
 						    <div  style={{"textIndent": "4em"}}>text</div>                       
                             <div  style={{"textIndent": "3em"}}>&#125;</div>
-                        <div  style={{"textIndent": "2em"}}>axios.post('http://localhost:5000/insert_logs', logData).then((res) => &#123;console.log(res)&#125;).catch((err) => &#123;console.log(err)&#125;)</div>
+                        <div  style={{"textIndent": "2em"}}>axios.post('http://ec2-18-184-124-31.eu-central-1.compute.amazonaws.com/insert_logs', logData).then((res) => &#123;console.log(res)&#125;).catch((err) => &#123;console.log(err)&#125;)</div>
                     <div  style={{"textIndent": "1em"}}>&#125;</div>
                     &#125;<br/>
                 &lt;/script>                                         

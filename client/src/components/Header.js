@@ -14,13 +14,13 @@ export default (props) =>{
             <nav>
                 <Link to="/">About</Link>
                 <Link to="/login">Login</Link>
-                <Link to="/dashboard">Dasboard</Link>
+                <Link to="/dashboard">Dashboard</Link>
             </nav>
             <div>
                 <Switch>
                     <Route path="/" component={About} exact/>
                     <Route path="/login" render={() => <Login handleLoginUser={props.handleLoginUser}/>} exact/>
-                    <Route path="/dashboard" component={Dashboard} exact/>
+                    <Route path="/dashboard" render={() => <Dashboard handleGetLogs={props.handleGetLogs} logs={props.logs}/>} exact/>                    
                     <Route path="/" component={Error}/>
                 </Switch>
             </div>
